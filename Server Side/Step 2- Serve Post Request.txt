@@ -1,0 +1,8 @@
+
+Route::post('/formula/add', function(Request $request) {
+    $formula = new \App\Formula();
+    $formula->name = $request->name;
+    $formula->code = $request->code;
+    $formula->save();
+    return $formula;
+});
